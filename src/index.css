@@ -62,6 +62,15 @@ input[type="button"] {
   text-transform: uppercase;
 }
 
+button.btn {
+  border: none;
+  outline: none;
+  padding: 0.2rem;
+  border-radius: 0;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
 section.section2 {
   padding: 1rem;
   text-align: center;

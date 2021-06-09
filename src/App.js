@@ -9,6 +9,8 @@ const App = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     setText(data);
+
+    const amount = parseInt(count);
   };
 
   return (
@@ -25,13 +27,23 @@ const App = () => {
             value={count}
             onChange={(event) => setCount(event.target.value)}
           />
-          <input type="button" value="generate" className="btn btn-warning" />
+          <input
+            type="button"
+            value="generate"
+            className="btn btn-warning"
+            onClick={handleSubmit}
+          />
         </form>
       </section>
       <section className="container section2 text-center">
         {text.map((item) => {
           return <p key={uuid()}>{item}</p>;
         })}
+        {!text.length <= 0 && (
+          <button className="btn btn-danger w-100" onClick={() => setText([])}>
+            reset
+          </button>
+        )}
       </section>
     </div>
   );
