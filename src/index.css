@@ -87,3 +87,41 @@ section.section2 p {
   align-items: center;
   flex-direction: column;
 }
+
+@media only screen and (max-width: 500px) {
+  form.form {
+    flex-direction: column;
+  }
+
+  input[type="number"] {
+    width: 15rem;
+    margin: 0.5rem auto;
+  }
+
+  input[type="button"] {
+    width: 15rem;
+  }
+
+  section.section2 p {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  form.form {
+    flex-direction: column;
+  }
+
+  input[type="number"] {
+    width: 10rem;
+    margin: 0.5rem auto;
+  }
+
+  input[type="button"] {
+    width: 10rem;
+  }
+
+  section.section2 p {
+    font-size: 1rem;
+  }
+}

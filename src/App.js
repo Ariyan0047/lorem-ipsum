@@ -13,6 +13,7 @@ const App = () => {
     if (amount > 8) amount = 8;
     const modifiedData = data.slice(0, amount);
     setText(modifiedData);
+    setCount(0);
   };
 
   return (
