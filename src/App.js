@@ -3,14 +3,16 @@ import { v4 as uuid } from "uuid";
 import React, { useState } from "react";
 
 const App = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(5);
   const [text, setText] = useState([]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setText(data);
-
-    const amount = parseInt(count);
+    let amount = parseInt(count);
+    if (amount <= 0) amount = 1;
+    if (amount > 8) amount = 8;
+    const modifiedData = data.slice(0, amount);
+    setText(modifiedData);
   };
 
   return (
